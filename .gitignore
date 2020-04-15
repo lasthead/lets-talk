@@ -1,0 +1,12 @@
+.DS_Store
+node_modules
+/client/dist
+/server/dist
+# Editor directories and files
+.idea
+.vscode
+
+# local env files
+.env.local
+.env.*.local
+/.cache/
