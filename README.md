@@ -1,5 +1,5 @@
 # lets-talk
-
+#### A new experience web-chat  Stack: TypeScript Vue.js Express Socket.io
 ## Project setup
 ```
 yarn install
