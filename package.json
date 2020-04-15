@@ -6,8 +6,7 @@
     "build": "vue-cli-service build --dest dist",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "start": "node server.js",
-    "postinstall": "vue-cli-service build --dest dist"
+    "start": "node server.js"
   },
   "dependencies": {
     "@mdi/font": "^3.6.95",
