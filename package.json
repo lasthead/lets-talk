@@ -16,6 +16,7 @@
     "core-js": "^3.6.4",
     "css-loader": "^3.4.2",
     "dayjs": "^1.8.23",
+    "dotenv": "^8.2.0",
     "roboto-fontface": "*",
     "socket.io-client": "^2.3.0",
     "store": "latest",
