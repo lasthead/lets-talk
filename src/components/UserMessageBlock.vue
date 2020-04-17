@@ -86,6 +86,7 @@ export default Vue.extend({
   }
   &__content {
     font-size: var(--font-size-text);
+    word-break: break-word;
   }
   &__from-user {
     margin: 2rem 0;
