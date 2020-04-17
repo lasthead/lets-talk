@@ -44,9 +44,9 @@ export default Vue.extend({
 <style lang="scss" scoped>
 @import "../../src/assets/mixins";
 .block {
-  width: 90%;
+  width: 92%;
   @media #{$min768} {
-    width: calc(90% - var(--sidebar-left-width));
+    width: calc(95% - var(--sidebar-left-width));
   }
   &__input-message {
     display: flex;
