@@ -6,12 +6,6 @@
       </div>
       <div class="header__row-item">
         <ButtonBase
-          icon-class="mdi mdi-attachment button__icon icon--white"
-          btn-class="button__attachment"
-        />
-      </div>
-      <div class="header__row-item">
-        <ButtonBase
           icon-class="mdi mdi-settings"
           btn-class="button--clear button__settings"
           :items="items"
