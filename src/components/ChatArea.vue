@@ -5,7 +5,8 @@
         :message-object="message"
         :key="index"
         v-for="(message, index) in loadedMessages"
-        class="chat__item-message"
+        :class="['chat__item-message', 'item-message__' + index]"
+        @rendered="scrollToLastBlock"
       />
     </div>
     <TextInputArea
@@ -76,17 +77,36 @@ export default Vue.extend({
       };
       this.$socket.emit("message", message);
       this.messageText = "";
+    },
+    scrollToLastBlock() {
+      const windowHeight = document.documentElement.clientHeight;
+      const chatItemsBlock = document.querySelector(
+        ".chat__items"
+      ) as HTMLElement;
+      const chatAreaHeight = chatItemsBlock.scrollHeight;
+      if (windowHeight - 100 < chatAreaHeight) {
+        document.documentElement.scrollTop = chatAreaHeight;
+      }
     }
   }
 });
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/mixins";
+
 .chat {
   padding: 2rem;
   &__text-input {
     position: fixed;
-    bottom: 2rem;
+    bottom: 0;
+    padding: 0 1rem;
+    @media #{$min768} {
+      padding: 2rem;
+    }
+  }
+  &__items {
+    margin-bottom: 10rem;
   }
 }
 </style>

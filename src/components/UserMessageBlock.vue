@@ -49,6 +49,9 @@ export default Vue.extend({
       type: Object,
       default: () => ({})
     }
+  },
+  mounted(): void {
+    this.$emit("rendered", true);
   }
 });
 </script>

@@ -44,13 +44,14 @@ export default Vue.extend({
 <style lang="scss" scoped>
 @import "../../src/assets/mixins";
 .block {
-  width: 22rem;
+  width: 90%;
   @media #{$min768} {
-    width: 60rem;
+    width: calc(90% - var(--sidebar-left-width));
   }
   &__input-message {
     display: flex;
     align-items: center;
+    background: var(--color-background-light);
   }
 }
 </style>
